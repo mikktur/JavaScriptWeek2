@@ -1,18 +1,29 @@
 {
-  "name": "javascript",
+  "name": "week2",
   "version": "1.0.0",
-  "description": "",
+  "description": "practice",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mikko Turunen",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.57.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3"
-  }
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikktur/JavaScriptWeek2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mikktur/JavaScriptWeek2/issues"
+  },
+  "homepage": "https://github.com/mikktur/JavaScriptWeek2#readme"
 }
