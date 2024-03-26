@@ -9,4 +9,3 @@ const distance = Math.sqrt(Math.pow(x2 - x, 2) + Math.pow(y2 - y, 2));
 text.innerText = 'the distance between points is : ' + distance;
 
 body.appendChild(text);
-
