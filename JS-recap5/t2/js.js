@@ -1,26 +1,23 @@
 'use strict';
-async function testPost(){
+async function testPost() {
   const data = {
-    body:JSON.stringify({
+    body: JSON.stringify({
       name: 'Mikko',
-      job: 'Student'
+      job: 'Student',
     }),
     method: 'POST',
-    headers:{
-      'Content-type': 'application/json'
+    headers: {
+      'Content-type': 'application/json',
     },
+  };
+
+  try {
+    const response = await fetch('https://reqres.in/api/users', data);
+    if (!response.ok) throw new Error('invalid input!');
+    const jsonData = await response.json();
+    console.log('response', jsonData);
+  } catch (error) {
+    console.log(error.message);
   }
-
-
-    try {
-      const response = await fetch('https://reqres.in/api/users',data);
-      if (!response.ok) throw new Error('invalid input!')
-      const jsonData = await response.json();
-      console.log('response',jsonData);
-    } catch (error) {
-      console.log(error.message);
-    }
-
-
 }
-testPost()
+testPost();

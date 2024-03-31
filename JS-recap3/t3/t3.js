@@ -28,7 +28,7 @@ addParagraph(currentTime);
 function getBrowserInfo() {
   const user = navigator.userAgent;
   let browserInfo;
-  const browserRegex = /(?:Edg\/|Firefox\/|Chrome\/|Safari\/)(\d+)/;
+  const browserRegex = /(?:Edg\/|Chrome\/|Safari\/)(\d+)/;
   const match = user.match(browserRegex);
   if (match) {
     browserInfo = match[0];
@@ -36,6 +36,9 @@ function getBrowserInfo() {
     if (user.includes('Edg') || user.includes('Edge')) {
       browserInfo = `Microsoft Edge ${version}`;
     }
+  }
+  if (browserInfo === undefined) {
+    browserInfo = 'undefined';
   }
   browserInfo = browserInfo.replace('/', ' ');
 
